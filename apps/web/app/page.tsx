@@ -1,7 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
-
+import { calculateElevation} from "@repo/elevation/calculateElevation";
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
   srcDark: string;
@@ -19,8 +19,10 @@ const ThemeImage = (props: Props) => {
 };
 
 export default function Home() {
+  let elevation = calculateElevation(10000000);
   return (
     <div className={styles.page}>
+      <h2> {elevation}</h2>
       <main className={styles.main}>
         <ThemeImage
           className={styles.logo}
