@@ -57,6 +57,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@repo/elevation':
+        specifier: workspace:*
+        version: link:../../packages/elevation
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -76,9 +79,6 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
-      '@types/node':
-        specifier: ^20
-        version: 20.17.6
       '@types/react':
         specifier: 18.3.1
         version: 18.3.1
